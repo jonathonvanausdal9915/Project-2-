@@ -1,8 +1,7 @@
 .selector-for-some-widget {
     box-sizing: content-box;
-}
-
+  }
 body {
     background-image: url("./Main/myFitnessZone.png");
     background-repeat: no-repeat;
-}
+  }
