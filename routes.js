@@ -1,9 +1,10 @@
+const app = require("express")
 
 
 
 
-
-app.get("", function (req, res) {
+app.get("/", function (req, res) {
+    res.send("Signup/Login Page")
     db = JSON.parse(fs.readFileSync("./db/db.json")) || []
     res.json(db)
 });
@@ -20,5 +21,13 @@ app.post("", function (req, res) {
     })
     res.json(db)
 });
+
+function auth(req, res, next) {
+    if(req.query.admin === 'true') {
+
+    } else {
+        res.send('no auth');
+    }
+}
 
 module.exports = app;
