@@ -2,13 +2,13 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {
+class Workout extends Model {
     checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
     }
 }
 
-User.init({
+Workout.init({
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -19,26 +19,19 @@ User.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    last_name: {
+    activity: {
         type: DataTypes.STRING,
+        allowNull: false,
+    },
+    Date: {
+        type: DataTypes.DATE,
         allowNull: false,
     },
 
-    email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-            isEmail: true,
-        },
-    },
-    password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            len: [8],
-        },
-    },
+    User_id: {
+        type: DataTypes.INTEGER,
+        references: { model: "user", key: "id" },
+    }
 }, {
     hooks: {
         beforeCreate: async(newUserData) => {
