@@ -50,4 +50,4 @@ Workout.init({
     modelName: 'user',
 });
 
-module.exports = User;
+module.exports = Workout;
