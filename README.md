@@ -1,3 +1,3 @@
-# Project-2-
+# MyFitnessZone
 
-## Description:
+## Description: This app was inspired by being fit. We wanted there to be a place where people can go to set goals and track their progress in their fitness journey. You can create an account and login to the app. You can select a workout and input your age, height, weight, etc to track your starting point. Then you can track your progress as you are completing your goals and workouts.
