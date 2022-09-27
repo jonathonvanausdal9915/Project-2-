@@ -8,38 +8,55 @@ class User extends Model {
     }
 }
 
-User.init({
-    id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-    },
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    last_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-
-    email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-            isEmail: true,
+User.init(
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
         },
-    },
-    password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            len: [8],
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
-    },
-}, {
+        last_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        gender: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        age: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        height: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        weight: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: true,
+            },
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [8],
+            },
+        },
+    }, 
+    {
     hooks: {
         beforeCreate: async(newUserData) => {
             newUserData.password = await bcrypt.hash(newUserData.password, 10);
