@@ -8,31 +8,32 @@ class Workout extends Model {
     }
 }
 
-Workout.init({
-    id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
+Workout.init(
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        activity: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        date: {
+            type: DataTypes.DATE,
+            allowNull: false,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: { model: "user", key: "id" },
+        }
     },
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    activity: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    Date: {
-        type: DataTypes.DATE,
-        allowNull: false,
-    },
-
-    User_id: {
-        type: DataTypes.INTEGER,
-        references: { model: "user", key: "id" },
-    }
-}, {
+    {
     hooks: {
         beforeCreate: async(newUserData) => {
             newUserData.password = await bcrypt.hash(newUserData.password, 10);
@@ -47,7 +48,7 @@ Workout.init({
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'workout',
 });
 
 module.exports = Workout;
