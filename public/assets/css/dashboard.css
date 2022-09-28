@@ -1,0 +1,134 @@
+.calender {
+    margin: auto;
+    height: 600px;
+    width: 80%;
+    color: black;
+}
+
+.goals {
+    margin: auto;
+    height: 400px;
+    width: 80%;
+    color: black;
+}
+
+.dashboardh2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    background-color: rgb(45, 45, 255);
+    color: white;
+    width: 350px;
+}
+
+.goalh2 {
+    font-size: 50px;
+    width: 250px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(45, 45, 255);
+    color: white;
+}
+
+.body {
+    background-color: rgb(255, 255, 255);
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: linear-gradient(45deg, rgb(41, 41, 254), rgb(9, 9, 9));
+    color: white;
+    text-align: center;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: rgb(251, 247, 247);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: rgb(87, 82, 82);
+    text-align: center;
+}
+
+#day-1 {
+    border: solid;
+    height: 300px;
+    width: 14.5%;
+    background-color: rgb(225, 223, 223);
+}
+
+#day-2 {
+    border: solid;
+    height: 300px;
+    width: 14.5%;
+    background-color: rgb(225, 223, 223);
+}
+
+#day-3 {
+    border: solid;
+    height: 300px;
+    width: 14.2%;
+    background-color: rgb(225, 223, 223);
+}
+
+#day-4 {
+    border: solid;
+    height: 300px;
+    width: 14.2%;
+    background-color: rgb(225, 223, 223);
+}
+
+#day-5 {
+    border: solid;
+    height: 300px;
+    width: 14.2%;
+    background-color: rgb(225, 223, 223);
+}
+
+#day-6 {
+    border: solid;
+    height: 300px;
+    width: 14.2%;
+    background-color: rgb(225, 223, 223);
+}
+
+#day-7 {
+    border: solid;
+    height: 300px;
+    width: 14.2%;
+    background-color: rgb(225, 223, 223);
+}
+
+.weekdayalignment {
+    border: solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#profilebtn {
+    float: right;
+}
+
+.past {
+    background-color: #d3d3d3;
+    color: white;
+}
+
+.present {
+    background-color: #ff6961;
+    color: white;
+}
+
+.future {
+    background-color: #77dd77;
+    color: white;
+}
