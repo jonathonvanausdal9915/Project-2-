@@ -14,7 +14,7 @@
   ## Lead Name:
   Zachry Jorgensen / Jonathon Van ausdal / Se Jin Ki 
   ## Installation
-  
+  SQL, NPM I, Calorie npm i package, fontAwesome, CSS, HTML, JS, NODE, EXPRESS, 
   ## Usage
   To track fitness progress and setting fitness goals.
   ## Contributors
@@ -24,5 +24,5 @@
   ## License
   ISC
   ## Questions
-  Github: [sejinki / zdjorgensen / jonathonvanausdal9915](https://github.com/sejinki / zdjorgensen / jonathonvanausdal9915/)
+  Github: [jonathonvanausdal9915](https://github.com/jonathonvanausdal9915/)
   Email: 
