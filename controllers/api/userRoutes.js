@@ -28,6 +28,7 @@ router.post('/login', async (req, res) => {
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
+
       res
         .status(400)
         .json({ message: 'Incorrect email or password' });
@@ -44,6 +45,12 @@ router.post('/login', async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   }
+
+        res
+            .status(400)
+            .json({ message: 'Incorrect email or password, please try again' });
+        return;
+    }
 });
 
 module.exports = router;
