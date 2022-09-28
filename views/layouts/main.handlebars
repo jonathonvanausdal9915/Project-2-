@@ -1,3 +1,10 @@
+{{!-- Not sure if the #if is doing anything --}}
+{{!-- The login page and any page is only rendering through the index.html page under the public folder and nothing in the handlebars is rendering... --}}
+{{!-- I think its still just the routes but I have no idea --}}
+{{!-- With index.html commented out its just a blank page when you start the server --}}
+{{#if logged_in}}
+    {{{ body }}}
+{{else}}    
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +20,7 @@
 </head>
 
 <body>
-
+    
     <nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
         <a class="navbar-brand" href="#">MYFITNESSZONE<i class="fa fa-heartbeat" aria-hidden="true"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,8 +56,8 @@
                 <h5 class="card-title">Login</h5>
             </div>
             <ul class="list-group list-group-flush">
-                <input class="form-input" type="text" id="user-name" name="user-name" value="User Name" />
-                <input class="form-input" type="password" id="first-name" name="first-name" value="First Name" />
+                <input class="form-input" type="text" id="user-email" name="user-email" value="Email" />
+                <input class="form-input" type="password" id="user-password" name="user-password" value="password" />
             </ul>
             <div class="card-body">
                 <button type="button" class="btn btn-primary btn-lg" id="signupbtn" type="submit">Sign In
@@ -59,7 +66,7 @@
 </div>
 <script src="../../public/assets/js/login.js"></script>
 
-
 </body>
 
 </html>
+{{/if}}
