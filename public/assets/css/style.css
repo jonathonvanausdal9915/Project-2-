@@ -68,4 +68,6 @@ label p {
     opacity: 100%;
 }
 
-#saveBtn {}
+#saveBtn {
+    background-color: white;
+}
