@@ -40,10 +40,12 @@ router.get('/profile', withAuth, async(req, res) => {
         res.status(500).json(err);
     }
 });
-
-router.get('/', (req, res) => {
+router.get('/signup', (req, res) => {
+    res.render('signup')
+});
+router.get('/login', (req, res) => {
     if (req.session.logged_in) {
-        res.redirect('/homepage');
+        res.redirect('/login');
         return;
     }
     res.render('/');
