@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-router.post('/', async(req, res) => {
-    console.log("yes");
+router.post('/', async (req, res) => {
+    console.log("user created call?");
     try {
         const userData = await User.create(req.body);
         req.session.save(() => {
@@ -15,8 +15,8 @@ router.post('/', async(req, res) => {
     }
 });
 
-router.post('/login', async(req, res) => {
-    console.log("login")
+router.post('/login', async (req, res) => {
+    console.log("login call?")
     try {
         const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -47,10 +47,6 @@ router.post('/login', async(req, res) => {
     } catch (err) {
         res.status(400).json(err);
     }
-    res
-        .status(400)
-        .json({ message: 'Incorrect email or password' });
-    return;
 });
 
 module.exports = router;
