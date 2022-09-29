@@ -3,7 +3,7 @@ const { Workout } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/save', withAuth, async(req, res) => {
-    console.log("HERE");
+
     try {
 
         const newWorkout = await Workout.create({

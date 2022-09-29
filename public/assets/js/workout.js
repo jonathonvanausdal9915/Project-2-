@@ -4,6 +4,7 @@ const workoutHandeler = async() => {
     const activity = document.querySelector('#activity').value.trim();
     const date = document.querySelector('#date').value.trim();
 
+
     if (workout_name, activity, date) {
         const response = await fetch('/api/workout/save', {
             method: 'POST',

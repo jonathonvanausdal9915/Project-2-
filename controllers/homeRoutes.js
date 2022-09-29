@@ -42,6 +42,7 @@ router.get('/dashboard', withAuth, async(req, res) => {
 });
 
 router.get('/workout', withAuth, async(req, res) => {
+
     res.render('workout');
 })
 
@@ -69,7 +70,9 @@ router.get('/signup', (req, res) => {
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
+        res.session.user_id = 1;
         res.redirect('/dashboard');
+
         return;
     }
     res.render('/');
