@@ -17,7 +17,7 @@
 
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <p id="welcome"> Welcome, {{ name }} </p>
+                <p id="welcome"> Welcome, {{ name }}! </p>
             </form>
 
         </div>
@@ -26,12 +26,12 @@
     <div class="row main">
         <div class="card-alignment" style="width: 32rem;">
             <form class="login-form"> 
-                <h3> Profile Information </h3>
+                <h1> Profile Information </h1>
                 <div>
                     <div>
                         <label for="first-name" id="first-name-label"> 
                             <p>
-                                First Name
+                                First Name 
                             </p> 
                         </label>
                     </div>
@@ -49,10 +49,50 @@
                         <input class="form-input" type="text" id="last-name" name="last-name" value="{{ last_name }}" /> 
                     </div>
                     <div>
+                        <label for="last-name" id="last-name-label"> 
+                            <p>
+                              <i class="fa-regular fa-person-half-dress fa-2x"></i>  Gender
+                            </p>     
+                        </label>
+                    </div>
+                    <div> 
+                        <input class="form-input" type="text" id="last-name" name="last-name" value="{{ gender }}" /> 
+                    </div>
+                    <div>
+                        <label for="last-name" id="last-name-label"> 
+                            <p>
+                             <i class="fa-solid fa-baby fa-2x"></i>   Age
+                            </p>     
+                        </label>
+                    </div>
+                    <div> 
+                        <input class="form-input" type="text" id="last-name" name="last-name" value="{{ age }}" /> 
+                    </div>
+                    <div>
+                        <label for="last-name" id="last-name-label"> 
+                            <p>
+                           <i class="fa-light fa-person fa-1x"></i>     Height
+                            </p>     
+                        </label>
+                    </div>
+                    <div> 
+                        <input class="form-input" type="text" id="last-name" name="last-name" value="{{ height }}" /> 
+                    </div>
+                    <div>
+                        <label for="last-name" id="last-name-label"> 
+                            <p>
+                           <i class="fa-solid fa-weight-scale fa-2x"></i>    Weight  
+                            </p>     
+                        </label>
+                    </div>
+                    <div> 
+                        <input class="form-input" type="text" id="last-name" name="last-name" value="{{ weight }}" /> 
+                    </div>
+                    <div>
                         <label for="email" id="email-label"> 
                             <p>
-                                E-Mail
-                            </p>     
+                             <i class="fa-regular fa-envelope fa-2x"></i>  Email    
+                            </p> 
                         </label>
                     </div>
                     <div> 

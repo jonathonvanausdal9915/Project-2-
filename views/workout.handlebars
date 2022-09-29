@@ -1,3 +1,4 @@
+
 <body>
     <nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
         <a class="navbar-brand" href="#">MYFITNESSZONE<i class="fa fa-heartbeat" aria-hidden="true"></i></a>
@@ -12,32 +13,35 @@
 
     <div class="test">
         <div class="card-alignment" style="width: 32rem;">
-            <form>
+            
                 <div class="card-body">
                     <h5 class="card-title">Add A Workout</h5>
                     <i class="fas fa-running fa-5x"></i> <i class="fa-solid fa-dumbbell fa-5x"></i> <i class="fa-solid fa-watch-fitness"></i>
                 </div>
                 <ul class="list-group list-group-flush">
                     <h2>Workout name</h2>
-                    <input class="form-input" type="text" id="workout-name" name="workout-name" />
+                    <input class="form-input" type="text" id="name" name="workout-name" />
                     <br>
-                    <h2>Start time</h2>
-                    <input class="form-input" type="text" id="start-time" name="start-time" />
+                    <h2>Workout type</h2>
+                    <input class="form-input" type="text" id="activity" name="workout-type" />
                     <br>
                     <h2>Date</h2>
                     <input class="form-input" type="text" id="date" name="date" />
                     <br>
-                    <h2>Workout type</h2>
-                    <input class="form-input" type="text" id="workout-type" name="workout-type" />
-                    <br>
+                    
+                    
+                    
 
                 </ul>
                 <div class="card-body">
-                    <button type="button" class="btn btn-primary btn-lg" id="savebtn" type="submit">Save
+                    <button onclick="workoutHandeler()"type="button" class="btn btn-primary btn-lg" id="workoutbtn" type="submit">Save
+                   
+                    
             </div>
         </div>
-            </form>
+            
     </div>
+    <script src="assets/js/workout.js"></script>
 
 
 </body>

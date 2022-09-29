@@ -2,8 +2,10 @@ const router = require('express').Router();
 const { Workout } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/save', withAuth, async(req, res) => {
+    console.log("HERE");
     try {
+
         const newWorkout = await Workout.create({
             ...req.body,
             user_id: req.session.user_id,
