@@ -27,7 +27,7 @@ router.get('/profile', withAuth, async(req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            include: [{ model: Project }],
+            // include: [{ model: Workout }], include this with dashboard get
         });
 
         const user = userData.get({ plain: true });
@@ -40,12 +40,14 @@ router.get('/profile', withAuth, async(req, res) => {
         res.status(500).json(err);
     }
 });
+
 router.get('/signup', (req, res) => {
     res.render('signup')
 });
+
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
-        res.redirect('/login');
+        res.redirect('/dashboard');
         return;
     }
     res.render('/');

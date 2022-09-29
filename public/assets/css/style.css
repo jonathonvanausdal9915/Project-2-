@@ -34,11 +34,12 @@ body {
 }
 
 .navbar-custom {
-    margin-bottom: 15px;
+    margin-bottom: 80px;
 }
 
-.main {
-    margin-left: 500px
+#welcome {
+    color: white;
+    font-weight: bold;
 }
 
 .profile {
@@ -66,8 +67,4 @@ label p {
     border-width: 2px;
     border-color: black;
     opacity: 100%;
-}
-
-#saveBtn {
-    background-color: white;
 }
