@@ -8,8 +8,24 @@
 .goals {
     margin: auto;
     height: 400px;
-    width: 80%;
+    width: 50%;
     color: black;
+}
+
+#goal {
+    height: 100px;
+    width: 100%;
+    font-size: 30px;
+}
+
+#savebtn {
+    height: 100px;
+    width: 250px;
+    font-size: 30px;
+}
+
+.form {
+    text-align: center;
 }
 
 .dashboardh2 {

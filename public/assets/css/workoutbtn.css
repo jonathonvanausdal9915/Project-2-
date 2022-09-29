@@ -1,0 +1,51 @@
+.test {
+    margin: auto;
+    padding-top: 200px;
+    height: 600px;
+    width: 50%;
+    color: black;
+}
+
+.card-alignment {
+    height: 800px;
+    margin: auto;
+    width: 80%;
+    color: black;
+    border: solid;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 50px;
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#savebtn {
+    height: 100px;
+    width: 250px;
+    font-size: 30px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+#workout-name {
+    height: 50px;
+}
+
+#start-time {
+    height: 50px;
+}
+
+#date {
+    height: 50px;
+}
+
+#workout-type {
+    height: 50px;
+}
