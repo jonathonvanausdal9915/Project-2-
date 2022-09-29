@@ -1,10 +1,4 @@
-{{!-- Not sure if the #if is doing anything --}}
-{{!-- The login page and any page is only rendering through the index.html page under the public folder and nothing in the handlebars is rendering... --}}
-{{!-- I think its still just the routes but I have no idea --}}
-{{!-- With index.html commented out its just a blank page when you start the server --}}
-{{#if logged_in}}
-    {{{ body }}}
-{{else}}    
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,58 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://kit.fontawesome.com/78a2821f83.js" crossorigin="anonymous"></script>
-    <link href="./assets/css/style.css" rel="stylesheet">
-    <title>My Fitness Zone</title>
-</head>
-
-<body>
+    <link href="assets/css/style.css" rel="stylesheet">
     
-    <nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">MYFITNESSZONE<i class="fa fa-heartbeat" aria-hidden="true"></i></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-home fa-1x" aria-hidden="true"></i>Home</button>
-
-            </ul>
-
-            <i class="fa-solid fa-dumbbell fa-2x"></i>
-
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button type="button" class="btn btn-primary btn-lg" id="loginbtn" type="submit">Login
-                    <i class="fa fa-user-circle" aria-hidden="true"></i>
-                </button>
-                <button type="button" class="btn btn-primary btn-lg" id="signupbtn" type="submit">Sign Up
-                    <i class="fa fa-user-plus" aria-hidden="true"></i>
-                </button>
-
-            </form>
-
-        </div>
-    </nav>
-    <div class="test">
-        <div class="card-alignment" style="width: 32rem;">
-
-            <div class="card-body">
-                <h5 class="card-title">Login</h5>
-            </div>
-            <ul class="list-group list-group-flush">
-                <input class="form-input" type="text" id="user-email" name="user-email" value="Email" />
-                <input class="form-input" type="password" id="user-password" name="user-password" value="password" />
-            </ul>
-            <div class="card-body">
-                <button type="button" class="btn btn-primary btn-lg" id="signupbtn" type="submit">Sign In
-            </div>
-    </div>
-</div>
-<script src="../../public/assets/js/login.js"></script>
-
-</body>
+</head>
+<body>{{{body}}}</body>
 
 </html>
-{{/if}}
