@@ -56,6 +56,7 @@
 
   Github: [Se Jin Ki](https://github.com/sejinki)
 
-  Email:
+  Email: kisejin2015@gmail.com
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
+
