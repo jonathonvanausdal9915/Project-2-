@@ -1,4 +1,4 @@
-const loginHandler = async(event) => {
+const loginHandler = async() => {
     console.log('working');
 
     const email = document.querySelector('#email').value.trim();
