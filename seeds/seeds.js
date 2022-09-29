@@ -13,7 +13,7 @@ const seedDatabase = async () => {
   });
 
   // for (const workout of workoutData) {
-  //   await workout.create({
+  //   await Workout.create({
   //     ...workout,
   //     user_id: users[Math.floor(Math.random() * users.length)].id,
   //   });
