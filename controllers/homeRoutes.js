@@ -3,20 +3,18 @@ const { Workout, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async(req, res) => {
     try {
         const workoutData = await Workout.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                },
-            ],
+            include: [{
+                model: User,
+                attributes: ['name'],
+            }, ],
         });
 
         const workouts = workoutData.map((workout) => workout.get({ plain: true }));
 
-        res.render('homepage', {
+        res.render('login', {
             workouts,
             logged_in: req.session.logged_in
         });
@@ -25,26 +23,26 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-router.get('/profile', withAuth, async (req, res) => {
-    try{
+router.get('/profile', withAuth, async(req, res) => {
+    try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [{ model: Project }],
-          });
-      
-          const user = userData.get({ plain: true });
-      
-          res.render('profile', {
+        });
+
+        const user = userData.get({ plain: true });
+
+        res.render('profile', {
             ...user,
             logged_in: true
-          });
+        });
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
 router.get('/', (req, res) => {
-    if(req.session.logged_in) {
+    if (req.session.logged_in) {
         res.redirect('/homepage');
         return;
     }
