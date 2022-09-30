@@ -1,13 +1,13 @@
 const workoutHandeler = async() => {
 
-    const workout_name = document.querySelector('#name').value.trim();
+    const name = document.querySelector('#name').value.trim();
     const activity = document.querySelector('#activity').value.trim();
     const date = document.querySelector('#date').value.trim();
 
-    if (workout_name, activity, date) {
-        const response = await fetch('/api/workout/save', {
+    if (name && activity && date) {
+        const response = await fetch('/api/workout', {
             method: 'POST',
-            body: JSON.stringify({ workout_name, activity, date }),
+            body: JSON.stringify({ name, activity, date }),
             headers: { 'Content-Type': 'application/json' },
         });
 
@@ -20,4 +20,4 @@ const workoutHandeler = async() => {
 };
 
 
-document.querySelector('#workoutbtn').addEventListener('submit', workoutHandeler);
+document.querySelector('.workout-form').addEventListener('submit', workoutHandeler);

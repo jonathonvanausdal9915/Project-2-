@@ -25,6 +25,7 @@ router.get('/', async(req, res) => {
 
 router.get('/dashboard', withAuth, async(req, res) => {
     try {
+        console.log(req.session);
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [{ model: Workout }]
@@ -37,6 +38,7 @@ router.get('/dashboard', withAuth, async(req, res) => {
             logged_in: true
         });
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
@@ -49,7 +51,6 @@ router.get('/profile', withAuth, async(req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            // include: [{ model: Workout }], include this with dashboard get
         });
 
         const user = userData.get({ plain: true });
