@@ -1,17 +1,18 @@
 const router = require('express').Router();
-const { Workout } = require('../../models');
-const withAuth = require('../../utils/auth');
+const { Workout, User } = require('../../models');
 
-router.post('/save', withAuth, async(req, res) => {
+router.post('/', async(req, res) => {
     console.log("HERE");
     try {
-
-        const newWorkout = await Workout.create({
-            ...req.body,
-            user_id: req.session.user_id,
+        console.log(req.body);
+        const newWorkout = await Workout.create(req.body);
+        req.session.save(() => {
+            req.session.user_id = newWorkout.user_id;
+            req.session.logged_in = true;
+            res.status(200).json(newWorkout);
         });
-        res.status(200).json(newWorkout);
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 });
