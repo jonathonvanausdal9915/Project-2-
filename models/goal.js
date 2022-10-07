@@ -1,10 +1,10 @@
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Workout extends Model {}
+class Goal extends Model {
+}
 
-Workout.init({
+Goal.init({
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -19,20 +19,16 @@ Workout.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    date: {
-        type: DataTypes.DATE,
-        allowNull: false,
-    },
     user_id: {
         type: DataTypes.INTEGER,
-        references: { model: "user", key: "id" },
+        references: {model: "user", key: "id"},
     }
 }, {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'workout',
+    modelName: 'goal',
 });
 
-module.exports = Workout;
+module.exports = Goal;

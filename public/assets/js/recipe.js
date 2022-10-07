@@ -1,13 +1,12 @@
-const workoutHandler = async () => {
+const recipeHandler = async () => {
 
     const name = document.querySelector('#name').value.trim();
     const activity = document.querySelector('#activity').value.trim();
-    const date = document.querySelector('#date').value.trim();
 
-    if (name && activity && date) {
-        const response = await fetch('/api/workout', {
+    if (name && activity) {
+        const response = await fetch('/api/recipe', {
             method: 'POST',
-            body: JSON.stringify({name, activity, date}),
+            body: JSON.stringify({name, activity}),
             headers: {'Content-Type': 'application/json'},
         });
 
@@ -19,4 +18,4 @@ const workoutHandler = async () => {
     }
 };
 
-document.querySelector('.workout-form').addEventListener('submit', workoutHandler);
+document.querySelector('.recipe-form').addEventListener('submit', recipeHandler);

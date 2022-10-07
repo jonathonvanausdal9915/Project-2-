@@ -1,0 +1,31 @@
+.card-alignment {
+    height: 800px;
+    margin: auto;
+    width: 80%;
+    color: black;
+    border: solid;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 50px;
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#savebtn {
+    height: 100px;
+    width: 250px;
+    font-size: 30px;
+}
+
+#recipe-name {
+    height: 50px;
+}
+
+#recipe-activity {
+    height: 50px;
+}

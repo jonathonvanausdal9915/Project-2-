@@ -1,4 +1,4 @@
-const displayProfile = async(event) => {
+const displayProfile = async (event) => {
     event.preventDefault();
 
     const name = document.querySelector('#first-name').value.trim();
@@ -8,7 +8,7 @@ const displayProfile = async(event) => {
     if (name && lastName && email) {
         const response = await fetch(`/api/users`, {
             method: 'POST',
-            body: JSON.stringify({ name, lastName, email }),
+            body: JSON.stringify({name, lastName, email}),
             headers: {
                 'Content-Type': 'application/json',
             },

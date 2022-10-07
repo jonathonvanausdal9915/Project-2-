@@ -1,4 +1,4 @@
-const signupHandler = async() => {
+const signupHandler = async () => {
 
     const name = document.querySelector('#first-name').value.trim();
     const last_name = document.querySelector('#last-name').value.trim();
@@ -12,8 +12,8 @@ const signupHandler = async() => {
     if (name && last_name && gender && age && height && weight && email && password) {
         const response = await fetch('/api/users', {
             method: 'POST',
-            body: JSON.stringify({ name, last_name, gender, age, height, weight, email, password }),
-            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({name, last_name, gender, age, height, weight, email, password}),
+            headers: {'Content-Type': 'application/json'},
         });
 
         if (response.ok) {
@@ -23,6 +23,5 @@ const signupHandler = async() => {
         }
     }
 };
-
 
 document.querySelector('#signupbtn').addEventListener('submit', signupHandler);

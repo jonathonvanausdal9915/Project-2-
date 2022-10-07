@@ -1,59 +1,54 @@
-<head>
-    <link href="assets/css/dashboard.css" rel="stylesheet">
-</head>
 <body class="body">
-    <a href="/profile" id="profilebtn" class="btn btn-primary btn-lg"><i class="fa fa-user-circle fa-2x" 
-        aria-hidden="true"></i>My Profile</a>
-    <div class="calender">
-        <a href="/" >
-            <h2 class="dashboardh2">Dashboard<i class="fa fa-heartbeat" aria-hidden="true"></i></h2>
-        </a>
-        <br>
-
-        <div class="month">
-            <ul>
-                <p id="currentDay">goes here</p>
-
-            </ul>
+<a href="/profile" id="profilebtn" class="btn btn-primary btn-lg"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>View Profile</a>
+<div class="calender">
+    <a href="/">
+        <h2 class="dashboardh2">Dashboard<i class="fa fa-heartbeat" aria-hidden="true"></i></h2>
+    </a>
+    <br>
+    <div style="color: white" class="goals" id="workoutlist">Workouts
+        <div style="color: white">
+            {{#each workoutlist}}
+                <div style="color: white">
+                    {{#dataValues}}
+                        <li>{{name}} -&nbsp;{{activity}}</li>
+                    {{/dataValues}}
+                </div>
+            {{/each}}
         </div>
-
-        <ul class="weekdays">
-            <li>Monday</li>
-            <li>Tuesday</li>
-            <li>Wednesday</li>
-            <li>Thursday</li>
-            <li>Friday</li>
-            <li>Saturday</li>
-            <li>Sunday</li>
-        </ul>
-        <div class="weekdayalignment">
-            <div class="day" id="day-1"></div>
-            <div class="day" id="day-2"></div>
-            <div class="day" id="day-3"></div>
-            <div class="day" id="day-4">{{workout.name}}
-                {{workout.activity}}{{workout.date}}
-            </div>
-            <div class="day" id="day-5"></div>
-            <div class="day" id="day-6"></div>
-            <div class="day" id="day-7"></div>
+    </div>
+    <br><br>
+    <div style="color: white" class="goals" id="goallist">Goals
+        <div style="color: white">
+            {{#each goallist}}
+                <div style="color: white">
+                    {{#dataValues}}
+                        <li>{{name}} -&nbsp;{{activity}}</li>
+                    {{/dataValues}}
+                </div>
+            {{/each}}
         </div>
-        <a href="/workout" class="btn btn-primary btn-lg">Add Workout <i class="fa fa-plus" aria-hidden="true"></i></a>
-
-
     </div>
-    <br><br><br><br><br><br><br>
-    <div class="goals">
-        <h2 class="goalh2">Goals<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></h2>
-        <form class="form">
-            <h2 class="write-goal">Write a goal you would like to acheive!</h2>
-            <input class="form-input" type="text" id="goal" name="goal" />
-            <button type="button" class="btn btn-primary btn-lg" id="savebtn" type="submit">Save
-        </form>
-
-
+    <br><br>
+    <div style="color: white" class="goals" id="recipelist">Recipes
+        <div style="color: white">
+            {{#each recipelist}}
+                <div style="color: white">
+                    {{#dataValues}}
+                        <li>{{name}} -&nbsp;{{activity}}</li>
+                    {{/dataValues}}
+                </div>
+            {{/each}}
+        </div>
     </div>
-</body>
-
+    <br><br>
+    <a href="/workout" class="btn btn-primary btn-lg">Add Workout<i class="fa fa-plus" aria-hidden="true"></i></a>
+    <a href="/goal" class="btn btn-primary btn-lg">Add Goal<i class="fa fa-plus" aria-hidden="true"></i></a>
+    <a href="/recipe" class="btn btn-primary btn-lg">Add Recipe<i class="fa fa-plus" aria-hidden="true"></i></a>
+</div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="./assets/js/dashboard.js"></script>
+<script src="assets/js/dashboard.js"></script>
+<script src="assets/js/workout.js"></script>
+<script src="assets/js/goal.js"></script>
+<script src="assets/js/recipe.js"></script>
+</body>

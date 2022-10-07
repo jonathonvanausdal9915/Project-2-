@@ -1,49 +1,38 @@
-
 <body>
-    <nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">MYFITNESSZONE<i class="fa fa-heartbeat" aria-hidden="true"></i></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a href="/dashboard" class="btn btn-primary btn-lg">Home <i class="fa fa-home fa-1x" aria-hidden="true"></i></a>
+<nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">MYFITNESSZONE<i class="fa fa-heartbeat" aria-hidden="true"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="/dashboard" class="btn btn-primary btn-lg">Home <i class="fa fa-home fa-1x" aria-hidden="true"></i></a>
+</nav>
 
-
-    </nav>
-
-
-    <div class="test">
-        <div class="card-alignment" style="width: 32rem;">
-            
-            <form class="workout-form">
-                <div class="card-body">
-                    <h5 class="card-title">Add A Workout</h5>
-                    <i class="fas fa-running fa-5x"></i> <i class="fa-solid fa-dumbbell fa-5x"></i> <i class="fa-solid fa-watch-fitness"></i>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <h2>Workout name</h2>
-                    <input class="form-input" type="text" id="name" name="workout-name" />
-                    <br>
-                    <h2>Workout type</h2>
-                    <input class="form-input" type="text" id="activity" name="workout-type" />
-                    <br>
-                    <h2>Date</h2>
-                    <input class="form-input" type="text" id="date" name="date" />
-                    <br>
-                    
-                    
-                    
-
-                </ul>
-                <div class="card-body">
-                    <button onclick="workoutHandeler()"type="button" class="btn btn-primary btn-lg" id="workoutbtn" type="submit">Save
-            </form> 
-                    
+<div class="test">
+    <div class="card-alignment" style="width: 32rem;">
+        <form class="workout-form">
+            <div class="card-body">
+                <h5 class="card-title">Add A Workout</h5>
+                <i class="fas fa-running fa-5x"></i> <i class="fa-solid fa-dumbbell fa-5x"></i> <i
+                    class="fa-solid fa-watch-fitness"></i>
             </div>
-        </div>
-            
+            <ul style="color: white" class="list-group list-group-flush">
+                <h2>Workout name</h2>
+                <input class="form-input" type="text" id="name" name="workout-name"/>
+                <br>
+                <h2>Workout Activity</h2>
+                <input class="form-input" type="text" id="activity" name="workout-type"/>
+                <br>
+                <h2>Date</h2>
+                <input class="form-input" type="text" id="date" name="date"/>
+                <br>
+            </ul>
+            <div class="card-body">
+                <button onclick="workoutHandler()" type="button" class="btn btn-primary btn-lg" id="workoutbtn" type="submit">Save</button>
+            </div>
+        </form>
     </div>
-    <script src="assets/js/workout.js"></script>
-
-
+</div>
+<script src="assets/js/workout.js"></script>
 </body>
 

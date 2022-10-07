@@ -1,0 +1,33 @@
+<body>
+<nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">MYFITNESSZONE<i class="fa fa-heartbeat" aria-hidden="true"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="/dashboard" class="btn btn-primary btn-lg">Home<i class="fa fa-home fa-1x" aria-hidden="true"></i></a>
+</nav>
+
+<div class="test">
+    <div class="card-alignment" style="width: 32rem;">
+        <form class="goal-form">
+            <div class="card-body">
+                <div style="margin-left:30px ">Add a Goal</div>
+            </div>
+            <ul class="list-group list-group-flush">
+                <h2>Goal Name</h2>
+                <input class="form-input" type="text" id="name" name="goal-name"/>
+                <br>
+                <h2>Activity</h2>
+                <input class="form-input" type="text" id="activity" name="activity-type"/>
+                <br>
+            </ul>
+            <div class="card-body">
+                <button onclick="goalHandler()" type="button" class="btn btn-primary btn-lg" id="goal-btn" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="assets/js/goal.js"></script>
+</body>
+

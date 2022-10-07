@@ -1,49 +1,40 @@
 <body>
-
-    <nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">MYFITNESSZONE<i class="fa fa-heartbeat" aria-hidden="true"></i></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-home fa-1x" aria-hidden="true"></i>Home</button>
-
-            </ul>
-
-            <i class="fa-solid fa-dumbbell fa-2x"></i>
-
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button type="button" class="btn btn-primary btn-lg" id="loginbtn" type="submit">Login
-                    <i class="fa fa-user-circle" aria-hidden="true"></i>
-                </button>
-                <a href="/signup" class="btn btn-primary btn-lg">Sign Up<i class="fa fa-user-plus" aria-hidden="true"></i></a>
-
-            </form>
-
-        </div>
-    </nav>
-    <div class="test">
-        <div class="card-alignment" style="width: 32rem;">
-            <form class="login-form">
+<nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">MYFITNESSZONE<i class="fa fa-heartbeat" aria-hidden="true"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-home fa-1x" aria-hidden="true"></i>Home</button>
+        </ul>
+        <i class="fa-solid fa-dumbbell fa-2x"></i>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button type="button" class="btn btn-primary btn-lg" id="loginbtn" type="submit">Login
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+            </button>
+            <a href="/signup" class="btn btn-primary btn-lg">Sign Up<i class="fa fa-user-plus"
+                                                                       aria-hidden="true"></i></a>
+        </form>
+    </div>
+</nav>
+<div class="test">
+    <div class="card-alignment" style="width: 32rem;">
+        <form class="login-form">
             <div class="card-body">
                 <h5 class="card-title">Login</h5>
             </div>
             <ul class="list-group list-group-flush">
-                <input class="form-input" type="text" id="email" name="email" value="E-Mail" />
-                <input class="form-input" type="password" id="password" name="passwrod" value="password" />
+                <input class="form-input" type="text" id="email" name="email"/>
+                <input class="form-input" type="password" id="password" name="password"/>
             </ul>
             <div class="card-body">
-                <button onclick="loginHandler()" type="button" class="btn btn-primary btn-lg" id="signinbtn" type="submit" >Sign In
+                <button onclick="loginHandler()" type="button" class="btn btn-primary btn-lg" id="signinbtn">Sign In </button>
             </div>
-            </form>
+        </form>
     </div>
 </div>
-<script src="./assets/js/login.js"></script>
-
-
+<script src="assets/js/login.js"></script>
 </body>
-

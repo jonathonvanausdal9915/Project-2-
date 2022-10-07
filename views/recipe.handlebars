@@ -1,0 +1,32 @@
+<body>
+<nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">MYFITNESSZONE<i class="fa fa-heartbeat" aria-hidden="true"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="/dashboard" class="btn btn-primary btn-lg">Home<i class="fa fa-home fa-1x" aria-hidden="true"></i></a>
+</nav>
+
+<div class="test">
+    <div class="card-alignment" style="width: 32rem;">
+        <form class="recipe-form">
+            <div class="card-body">
+                <div style="margin-left:30px ">Add a Recipe</div>
+            </div>
+            <ul style="color: white" class="list-group list-group-flush">
+                <h2>Recipe Name</h2>
+                <input class="form-input" type="text" id="name" name="recipe-name"/>
+                <br>
+                <h2>Activity</h2>
+                <input class="form-input" type="text" id="activity" name="activity-type"/>
+                <br>
+            </ul>
+            <div class="card-body">
+                <button onclick="recipeHandler()" type="button" class="btn btn-primary btn-lg" id="recipe-btn" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="assets/js/recipe.js"></script>
+</body>
