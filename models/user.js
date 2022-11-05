@@ -33,8 +33,8 @@ User.init(
             allowNull: false,
         },
         height: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            type: DataTypes.STRING,
+            allowNull: true,
         },
         weight: {
             type: DataTypes.STRING,
