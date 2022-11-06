@@ -22,6 +22,8 @@ body {
     margin: auto;
     width: 80%;
     color: white;
+    text-align: center;
+
 }
 
 .card-title {
@@ -67,4 +69,11 @@ label p {
     border-width: 2px;
     border-color: black;
     opacity: 100%;
+}
+.goalh2{
+    font-size:35px;
+    
+}
+.fa-star{
+    color:yellow;
 }

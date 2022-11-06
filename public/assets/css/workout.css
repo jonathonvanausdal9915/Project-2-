@@ -2,8 +2,8 @@
     height: 800px;
     margin: auto;
     width: 80%;
-    color: black;
-    border: solid;
+    color: white;
+    
 }
 
 .card-body {
@@ -12,7 +12,7 @@
 
 .card-title {
     font-size: 50px;
-    color: blue;
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 

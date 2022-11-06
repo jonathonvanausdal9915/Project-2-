@@ -3,6 +3,7 @@
     height: 600px;
     width: 80%;
     color: black;
+    text-align: center;
 }
 
 #goal {
@@ -27,6 +28,7 @@
     background-color: rgb(45, 45, 255);
     color: white;
     width: 350px;
+    margin:auto;
 }
 
 .goalh2 {
@@ -140,4 +142,8 @@ body {
 .future {
     background-color: #77dd77;
     color: white;
+}
+.adds {
+    text-align: center;
+    gap:5px;
 }
